@@ -12,10 +12,15 @@
             const baseUrl = "https://eghesewebspace.000webhostapp.com/api/hello";
             const visitorName = 'Mark';
             const url = `${baseUrl}?visitor_name=${encodeURIComponent(visitorName)}`;
-            $.get(url, function(response) {
+           /* $.get(url, function(response) {
                 console.log(JSON.parse(response));
                 //console.log(response);
             })
+                */
+            $.post(baseUrl, {"visitor_name":"Mike"}, function(data){
+                alert(data);
+            })
+
     </script>
 </body>
 </html>
